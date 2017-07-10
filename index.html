@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>FAQs</title>
+   		<script src="jquery-3.2.1.min.js"></script>
+   	 	
+</head>
+
+<body>
+	<form name= "form">
+<input type= "text" name = "text" value="" id="text">
+<input type= "button" id="one" value = "submit" >
+<br>
+<span id="sp"></span>
+
+<span id="sp1"></span>
+<span id="sp2"></span>
+	</form>
+	<script type="text/javascript">
+
+    $("#one").click(function() {
+		
+		var text = $("#text").val();
+		var letter,m,mf=1;
+		var text1 = text.split("");
+		var myArray = [];
+     for(var i in text1) {
+    myArray.push(text1[i]);
+}
+        for (var i = 0; i < myArray.length; i++) {
+            for (var j = 0; j < myArray.length; j++) {
+               if (myArray[i]==myArray[j]) {
+                  m++;
+               }
+               if (mf<m) {
+                mf=m;
+                letter=myArray[i];
+               }
+            }
+          m=0;
+       
+        }
+        console.log(letter+" ( " +mf +" times ) ") ;
+        var a=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'],index,indexe,indext,indexh;
+        var newArray=[];
+       
+        for (var i = 0; i < a.length; i++) {
+            if (a[i]==letter) {index=i;}
+            if (a[i]=='e') {indexe=i};
+            if (a[i]=='t') {indext=i};
+            if (a[i]=='h') {indexh=i};
+        }
+        // console.log(index)
+        // console.log(indexe)
+        //    console.log(indext)
+        //       console.log(indexh)
+        var myArray1=[],myArray2=[],myArray3=[];
+              for (var i = 0; i < myArray.length; i++) {
+                 for (var j = 0; j < a.length; j++) {
+                     if (myArray[i]==a[j]) {
+                   myArray1[i]=a[j+(indexe-index)]
+                   myArray2[i]=a[j+(indexh-index)]
+                    myArray3[i]=a[j+(indext-index)]
+                     }
+      console.log(indexe-index)
+      console.log(indexh-index)
+      console.log(indext-index)
+                 } 
+                
+
+
+              }
+
+              myArray1=myArray1.join('');
+              myArray2=myArray2.join('');
+              myArray3=myArray3.join('');
+              $("#sp").text(myArray1); 
+              $("#sp1").text(myArray2);
+             $("#sp2").text(myArray3);
+            
+           
+    })
+    </script>
+</body>
+</html>

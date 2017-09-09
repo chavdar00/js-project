@@ -2,15 +2,24 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-    <title>FAQs</title>
+    <title></title>
    		<script src="jquery-3.2.1.min.js"></script>
-   	 	
+   	 <!-- <link rel="stylesheet" type="text/css" href="css/ind.css"> -->
+     <style type="text/css">
+form{text-align: center;
+     margin-top: 20%;
+}
+
+     </style>
 </head>
 
 <body>
 	<form name= "form">
-<input type= "text" name = "text" value="" id="text">
-<input type= "button" id="one" value = "submit" >
+    <div></div>
+<input type= "text" name = "text" value="" id="text" style="width:250px;height:40px;"> 
+<div id="button">
+<input type= "button" id="one" value = "submit" name="button" style="background:red;width:150px;height:50px;">
+</div>
 <br>
 <span id="sp"></span>
 
@@ -63,15 +72,15 @@
                    myArray2[i]=a[j+(indexh-index)]
                     myArray3[i]=a[j+(indext-index)]
                      }
-      console.log(indexe-index)
-      console.log(indexh-index)
-      console.log(indext-index)
+      
                  } 
                 
 
 
               }
-
+console.log(indexe-index)
+      console.log(indexh-index)
+      console.log(indext-index)
               myArray1=myArray1.join('');
               myArray2=myArray2.join('');
               myArray3=myArray3.join('');
